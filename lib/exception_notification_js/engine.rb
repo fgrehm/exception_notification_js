@@ -1,5 +1,5 @@
-module ExceptionNotificationJS
+module ExceptionNotificationJs
   class Engine < ::Rails::Engine
-    isolate_namespace ExceptionNotificationJS
+    isolate_namespace ExceptionNotificationJs
   end
 end

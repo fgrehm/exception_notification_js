@@ -37,6 +37,8 @@ require 'initializers' if File.exists?('initializers.rb')
 TinyRailsApp.initialize!
 
 TinyRailsApp.routes.draw do
-  match "/" => "application#index"
+  get   "/" => "application#index"
   match "/favicon.ico", :to => proc {|env| [200, {}, [""]] }
+
+  mount ExceptionNotificationJs::Engine, at: "/_js_exceptions"
 end

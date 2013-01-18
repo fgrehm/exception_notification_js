@@ -1,6 +1,6 @@
-# ExceptionNotificationJs
+# ExceptionNotificationJS
 
-TODO: Write a gem description
+Get notified about JS errors on Rails apps
 
 ## Installation
 

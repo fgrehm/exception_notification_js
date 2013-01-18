@@ -5,7 +5,7 @@ require 'exception_notification_js/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "exception_notification_js"
-  gem.version       = ExceptionNotificationJs::VERSION
+  gem.version       = ExceptionNotificationJS::VERSION
   gem.authors       = ["Fabio Rehm"]
   gem.email         = ["fgrehm@gmail.com"]
   gem.description   = %q{Get notified about JS errors on Rails apps}

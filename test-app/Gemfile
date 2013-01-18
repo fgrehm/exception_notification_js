@@ -6,4 +6,5 @@ gem "tzinfo"
 gem "tiny-rails"
 gem "actionpack",   "~> 3.2"
 gem "railties",     "~> 3.2"
+gem "jquery-rails"
 gem "exception_notification_js", path: '../'

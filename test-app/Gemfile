@@ -1,0 +1,9 @@
+source :rubygems
+
+# Required by active_support
+gem "tzinfo"
+
+gem "tiny-rails"
+gem "actionpack",   "~> 3.2"
+gem "railties",     "~> 3.2"
+gem "exception_notification_js", path: '../'

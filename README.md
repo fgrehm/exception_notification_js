@@ -18,7 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use [promisejs](https://github.com/stackp/promisejs) for submiting AJAX requests
+back to the app and do not depend on jQuery, add the folowing to your
+`app/assets/application.js`:
+
+```javascript
+//= require 'exception_notification'
+```
+
+Or if your app uses jQuery:
+
+```javascript
+//= require 'exception_notification-jquery'
+```
+
+Go to your routest.rb and add:
+
+```ruby
+  mount ExceptionNotificationJs::Engine, at: "/_js_errors"
+```
 
 ## Contributing
 

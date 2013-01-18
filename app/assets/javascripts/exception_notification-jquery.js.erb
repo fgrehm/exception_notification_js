@@ -1,2 +1,8 @@
-//= require ./exception_notification/notifier-jquery
-//= require ./exception_notification/handler
+window.addEventListener('error', function(errorEvent) {
+  var errorInfo = {
+    message:     errorEvent.message,
+    file:        errorEvent.filename,
+    line_number: errorEvent.lineno
+  };
+  $.post('/_js_exceptions', errorInfo);
+});

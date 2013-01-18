@@ -1,2 +1,9 @@
-//= require ./exception_notification/notifier-promise
-//= require ./exception_notification/handler
+//= require promise
+window.addEventListener('error', function(errorEvent) {
+  var errorInfo = {
+    message:     errorEvent.message,
+    file:        errorEvent.filename,
+    line_number: errorEvent.lineno
+  };
+  promise.post('/_js_exceptions', errorInfo);
+});

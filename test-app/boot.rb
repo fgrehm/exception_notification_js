@@ -35,9 +35,9 @@ class TinyRailsApp < Rails::Application
   config.secret_token = "49837489qkuweoiuoqwehisuakshdjksadhaisdy78o34y138974xyqp9rmye8yrpiokeuioqwzyoiuxftoyqiuxrhm3iou1hrzmjk"
 end
 
-require 'initializers' if File.exists?('initializers.rb')
-
 TinyRailsApp.initialize!
+
+require 'initializers' if File.exists?('initializers.rb')
 
 TinyRailsApp.routes.draw do
   get   "/" => "application#index"

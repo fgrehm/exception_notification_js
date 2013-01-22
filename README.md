@@ -36,6 +36,20 @@ Go to your routest.rb and add:
   mount ExceptionNotificationJs::Engine, at: "/_js_errors"
 ```
 
+## Try it out!
+
+If you want to play around with the gem and have a look and the generated mails,
+you can:
+
+```terminal
+git clone https://github.com/fgrehm/exception_notification_js.git
+cd exception_notification_js/test-app
+bundle
+rackup
+```
+
+And go to http://localhost:9292 on your browser.
+
 ## Contributing
 
 1. Fork it

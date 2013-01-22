@@ -12,7 +12,7 @@ using in production environments and expect things to break.
 Add this line to your application's Gemfile and run the `bundle` command to
 install it.
 
-    gem 'exception_notification_js'
+    gem 'exception_notification_js', git: 'https://github.com/fgrehm/exception_notification_js.git'
 
 ## Usage
 

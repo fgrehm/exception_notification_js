@@ -7,6 +7,7 @@ require "tiny-rails"
 require "rails"
 
 require "action_controller/railtie"
+require "action_mailer/railtie"
 require "sprockets/railtie"
 
 Bundler.require :default
@@ -22,6 +23,8 @@ class TinyRailsApp < Rails::Application
   config.middleware.delete "ActionDispatch::Flash"
   config.middleware.delete "ActionDispatch::BestStandardsSupport"
   config.middleware.use Rails::Rack::LogTailer, "log/#{Rails.env}.log"
+
+  config.action_mailer.delivery_method = :letter_opener_web
 
   # Enable asset pipeline
   config.assets.enabled = true
@@ -41,4 +44,5 @@ TinyRailsApp.routes.draw do
   match "/favicon.ico", :to => proc {|env| [200, {}, [""]] }
 
   mount ExceptionNotificationJs::Engine, at: "/_js_exceptions"
+  mount LetterOpenerWeb::Engine,         at: "/letter_opener"
 end

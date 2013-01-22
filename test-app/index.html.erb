@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails: Welcome aboard</title>
+    <title>Exception Notification JS Test APP</title>
     <%= javascript_include_tag "jquery" %>
     <%= javascript_include_tag "exception_notification#{@suffix}" %>
+    <%= stylesheet_link_tag    "bootstrap.min" %>
+    <style>
+      body { padding-top: 20px; text-align: center; }
+
+      .icon-white {
+        background-image: url(<%=asset_path "glyphicons-halflings-white.png"%>);
+      }
+
+      .hero-unit {
+        padding: 30px;
+      }
+    </style>
   </head>
   <body>
-    <h1>TODO: Add link to letter opener web!</h1>
-    <p>
-      <% if @suffix.blank? %>
-        <a href="/?version=jquery">Switch to jQuery version</a>
-      <% else %>
-        <a href="/">Switch to promise.js version</a>
-      <% end %>
-    </p>
-    <button onclick="a += 1">
-      Click me!
-    </button>
+    <div class="container">
+      <div class="hero-unit">
+        <h1>Exception Notification JS Test APP</h1>
+        <h2>
+          <% if @suffix.blank? %>
+            <a href="/?version=jquery">Switch to jQuery version</a>
+          <% else %>
+            <a href="/">Switch to promise.js version</a>
+          <% end %>
+        </h2>
+        <p>
+          <button onclick="a += 1" class="btn btn-danger btn-large">
+            <i class="icon-fire icon-white"></i>
+            Throw an exception!
+            <i class="icon-fire icon-white"></i>
+          </button>
+        </p>
+        <p>
+          <a href="/letter_opener" target="_blank">Click here</a>
+          to see sent mails
+        </p>
+      </div>
+    </div>
   </body>
 </html>

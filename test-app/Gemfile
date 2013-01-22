@@ -7,4 +7,6 @@ gem "tiny-rails"
 gem "actionpack",   "~> 3.2"
 gem "railties",     "~> 3.2"
 gem "jquery-rails"
+gem "letter_opener_web", path: '../../letter_opener_web'
+
 gem "exception_notification_js", path: '../'

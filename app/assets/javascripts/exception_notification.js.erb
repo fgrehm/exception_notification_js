@@ -5,5 +5,5 @@ window.addEventListener('error', function(errorEvent) {
     file:        errorEvent.filename,
     line_number: errorEvent.lineno
   };
-  promise.post('/_js_exceptions', errorInfo);
+  promise.post('/_js_errors', errorInfo);
 });

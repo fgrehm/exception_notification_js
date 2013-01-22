@@ -4,5 +4,5 @@ window.addEventListener('error', function(errorEvent) {
     file:        errorEvent.filename,
     line_number: errorEvent.lineno
   };
-  $.post('/_js_exceptions', errorInfo);
+  $.post('/_js_errors', errorInfo);
 });

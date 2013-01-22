@@ -43,6 +43,6 @@ TinyRailsApp.routes.draw do
   get   "/" => "application#index"
   match "/favicon.ico", :to => proc {|env| [200, {}, [""]] }
 
-  mount ExceptionNotificationJs::Engine, at: "/_js_exceptions"
+  mount ExceptionNotificationJs::Engine, at: "/_js_errors"
   mount LetterOpenerWeb::Engine,         at: "/letter_opener"
 end

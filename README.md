@@ -2,19 +2,17 @@
 
 Get notified about JS errors on Rails apps
 
+# Warning
+
+This software is in alpha development stage, please keep that in mind before
+using in production environments and expect things to break.
+
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile and run the `bundle` command to
+install it.
 
     gem 'exception_notification_js'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install exception_notification_js
 
 ## Usage
 
